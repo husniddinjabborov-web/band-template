@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+input#menu {
+    opacity: 0;
+}
+
+label {
+    align-self: flex-start;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+label i {
+    padding: 16px;
+}
+header nav label i:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    flex-direction: row-reverse;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+header nav i#none {
+    position: absolute;
+    right: 0;
+    padding: 16px;
+    cursor: pointer;
+}
+header nav i:hover {
+    background-color: red;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li a,
+header nav ul li span {
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: large;
+}
+
+header nav ul li button {
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: large;
+}
+
+header nav ul li button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+header nav ul li:nth-child(5) {
+    display: none;
+}
+
+header nav ul li:hover {
+    background-color: #ddd;
+}
+
+header nav ul li a:hover,
+header nav ul li span:hover {
+    color: black;
+}
+
+/*  */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    text-transform: capitalize;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    display: block;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown:hover .dropbtn span,
+.dropdown-content:hover~.dropbtn {
+    background-color: #ddd;
+    color: black;
+}
+
+/*  */
+
+main {
+    max-width: 1600px;
+    position: relative;
+    margin: auto;
+    padding-top: 50px;
+}
+
+main section.banner {
+    width: 100%;
+    height: 700px;
+    background-image: url('./img/chicago.jpg');
+    background-size: cover;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+main section.banner img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+main section.banner .banner-head {
+    position: absolute;
+    color: white;
+    text-align: center;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+    font-size: x-large;
+}
+
+main section.banner .banner-head h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+}
+
+main section.banner .banner-head p {
+    padding: 20px;
+}
+
+/*  */
+
+main section.band {
+    max-width: 800px;
+    margin: auto;
+    padding: 70px;
+}
+
+main section.band h2 {
+    text-align: center;
+}
+
+main section.band em {
+    text-align: center;
+    display: block;
+    padding: 25px;
+    color: gray;
+}
+
+main section.band p {
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.band-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.band-cards .band-item {
+    flex: 0 0 30%;
+    padding: 25px;
+}
+
+.band-cards .band-item p {
+    text-align: center;
+}
+
+.band-cards .band-item img {
+    width: 100%;
+}
+
+
+/*  */
+
+main section.dates {
+    background-color: black;
+}
+
+main section.dates .dates-on {
+    max-width: 800px;
+    margin: auto;
+    padding: 70px;
+}
+
+main section.dates h2 {
+    text-align: center;
+    color: white;
+}
+
+main section.dates em {
+    text-align: center;
+    display: block;
+    padding: 25px;
+    color: gray;
+}
+
+/*  */
+
+.dates-on ul {
+    width: 100%;
+    background-color: white;
+}
+
+.dates-on ul li {
+    padding: 16px;
+}
+
+.dates-on ul li:not(:last-child) {
+    border-bottom: 1px solid gray;
+}
+
+.dates-on ul li:not(:last-child) span {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    margin: 0 15px;
+}
+
+.dates-on ul li:last-child span {
+    background-color: black;
+    border-radius: 50%;
+    padding: 5px;
+    color: white;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    float: right;
+}
+
+.dates-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.dates-cards .dates-item {
+    flex: 0 0 32%;
+    background-color: white;
+
+}
+
+.dates-cards .dates-item p {
+    text-align: center;
+}
+
+.dates-cards .dates-item img {
+    width: 100%;
+}
+
+.dates-cards .dates-item img:hover {
+    filter: brightness(50%);
+}
+
+.dates-cards .dates-item .dates-item-txt h4 {
+    padding: 8px 16px;
+}
+
+.dates-cards .dates-item .dates-item-txt span {
+    padding: 8px 16px;
+    display: inline-block;
+    color: gray;
+}
+
+.dates-cards .dates-item .dates-item-txt p {
+    text-align: left;
+    padding: 8px 16px;
+}
+
+.dates-cards .dates-item .dates-item-txt button {
+    margin: 8px 16px;
+    margin-bottom: 16px;
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+.dates-cards .dates-item .dates-item-txt button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/*  */
+
+main section.contact {
+    max-width: 800px;
+    margin: auto;
+    padding: 70px;
+}
+
+main section.contact h2 {
+    text-align: center;
+}
+
+main section.contact em {
+    text-align: center;
+    display: block;
+    padding: 25px;
+    color: gray;
+}
+
+/*  */
+
+
+.address {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.address address {
+    width: 100%;
+}
+
+.address address p {
+    padding: 4px;
+}
+
+.address form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.address form input {
+    width: 100%;
+    flex: 1 1 18%;
+    padding: 8px 16px;
+}
+
+.address form input:nth-child(3) {
+    flex: 1 1 100%;
+}
+
+.address form input:nth-child(4) {
+    flex: 0 0 auto;
+    padding: 8px 16px;
+    width: auto;
+    background-color: black;
+    align-self: flex-end;
+    color: white;
+    text-transform: uppercase;
+}
+
+/*  */
+
+footer img {
+    width: 100%;
+    height: auto;
+}
+footer .footer-txt {
+    padding: 50px;
+}
+footer .footer-txt p {
+    text-align: center;
+    padding: 8px 16px;
+    color: gray;
+}
+footer .footer-txt p a{
+    color: gray;
+}
+footer .footer-txt p {
+    font-size: x-large;
+}
+
+@media (max-width: 665px) {
+    input:checked~ul li.yes {
+        display: block;
+    }
+
+    label {
+        display: block;
+    }
+
+    header nav i#none {
+        display: none;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li:first-child:hover {
+        background-color: #ddd;
+        width: 100px;
+    }
+
+    header nav ul li:first-child a:hover {
+        color: black;
+    }
+
+    header nav ul li a {
+        display: block;
+        width: 100%;
+    }
+
+    header nav ul li:not(:first-child) {
+        display: none;
+    }
+
+    header nav ul li:last-child {
+        display: none;
+    }
+
+    /*  */
+
+
+
+    main section.banner .banner-head {
+        display: none;
+    }
+
+    .band-cards {
+        flex-direction: column;
+    }
+
+    .dates-cards {
+        flex-direction: column;
+    }
+
+    .dates-cards .dates-item {
+        margin-top: 10px;
+    }
+
+    /*  */
+
+    .address {
+        flex-direction: column;
+    }
+
+    .address form {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .address form input {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+
+
+}
